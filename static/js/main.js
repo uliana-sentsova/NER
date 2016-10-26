@@ -69,7 +69,7 @@ function main() {
         });
 
     });
-	
+
   	// Pretty Photo
 	$("a[rel^='prettyPhoto']").prettyPhoto({
 		social_tools: false
@@ -80,3 +80,35 @@ function main() {
 
 }
 main();
+
+$(document).ready(function () {
+  $('#recognize').click(function () {
+    console.log($('#message').val());
+    request = $.ajax({
+      url:'/process_text',
+      type: 'POST',
+      data: $('form').serialize(),
+      success: function(response) {
+                var d = JSON.parse(response);
+                $('#result').html(d.text);
+            },
+      error: function(error) {
+          console.log(error);
+      }
+
+    });
+      return false
+  });
+});
+
+// $(document).ready(function () {
+//   var click_count = 0;
+//   $('#recognize').click(function () {
+//     click_count += 1
+//     $.get('/data?cc=' + click_count, function(data) {
+//       var string = '<tr><td>' + click_count + '</td><td>' + data.a + '</td></tr>';
+//       $('.ourtable > tbody').append(string);
+//     });
+//     return false;
+//   });
+// });
