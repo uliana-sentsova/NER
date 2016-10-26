@@ -82,7 +82,49 @@ function main() {
 main();
 
 $(document).ready(function () {
+ 
+
+
+ // Polling function
+  var polling = function (task_id) {
+    
+    $.get('/result/' + task_id, function (data) {
+      if (data.ready) {
+        $('#result').html(data.result);
+      } else {
+        
+        setTimeout(function () {
+          $('#result').html('Архив обрабатывается');  
+          polling(task_id);
+        }, 1000);
+      }
+    });
+  };
+
+$('#upload-file-btn').click(function() {
+        var form_data = new FormData($('#upload-file')[0]);
+        $.ajax({
+            type: 'POST',
+            url: '/uploadajax',
+            data: form_data,
+            contentType: false,
+            cache: false,
+            processData: false,
+            async: false,
+            success: function(data) {
+                console.log('Success!');
+                polling(data.task_id);
+            },
+            
+            
+        });
+        
+    
+    });
+
+
   $('#recognize').click(function () {
+    
     console.log($('#message').val());
     request = $.ajax({
       url:'/process_text',
@@ -95,7 +137,7 @@ $(document).ready(function () {
       error: function(error) {
           console.log(error);
       }
-
+        
     });
       return false
   });
