@@ -379,3 +379,19 @@ header .intro-text {
 	margin-bottom: 20px;
 }
 }
+
+#result {
+	background-color: white;
+	color: black;
+}
+
+.loc {
+	background-color: red; 
+}
+
+.org {
+	background-color: blue; 
+}
+.per {
+	background-color: green; 
+}
