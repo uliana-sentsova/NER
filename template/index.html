@@ -9,21 +9,21 @@
 
 <!-- Favicons
     ================================================== -->
-<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+<link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../static/img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../static/img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../static/img/apple-touch-icon-114x114.png">
 
 <!-- Bootstrap -->
-<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+<link rel="stylesheet" type="text/css"  href="../static/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../static/fonts/font-awesome/css/font-awesome.css">
 
 <!-- Stylesheet
     ================================================== -->
-<link rel="stylesheet" type="text/css"  href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+<link rel="stylesheet" type="text/css"  href="../static/css/style.css">
+<link rel="stylesheet" type="text/css" href="../static/css/prettyPhoto.css">
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="js/modernizr.custom.js"></script>
+<!-- <script type="text/javascript" src="../static/js/modernizr.custom.js"></script> -->
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -103,28 +103,29 @@
         <h1>Обработка текста</h1>
 
       </div>
-      
+        <form>
           <div class="form-group">
             <textarea name="message" id="message" class="form-control" rows="4" placeholder="Ваш текст" required></textarea>
             <p class="help-block text-danger"></p>
           </div>
           <div id="success"></div>
-          <button type="submit" class="btn btn-default">Отправить текст</button>
+          <button id='recognize' type="submit" class="btn btn-default">Отправить текст</button>
         </form>
-        
+        <div class='col-md-12' id='result'><h1> Результат </h1></div>
       </div>
     </div>
   </div>
 </div>
 
 </div>
-<script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
-<script type="text/javascript" src="js/bootstrap.js"></script> 
-<script type="text/javascript" src="js/SmoothScroll.js"></script> 
-<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script> 
-<script type="text/javascript" src="js/jquery.isotope.js"></script> 
-<script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
-<script type="text/javascript" src="js/contact_me.js"></script> 
-<script type="text/javascript" src="js/main.js"></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+<script type="text/javascript" src="../static/js/jquery.1.11.1.js"></script> 
+<script type="text/javascript" src="../static/js/bootstrap.js"></script> 
+<script type="text/javascript" src="../static/js/SmoothScroll.js"></script> 
+<script type="text/javascript" src="../static/js/jquery.prettyPhoto.js"></script> 
+<script type="text/javascript" src="../static/js/jquery.isotope.js"></script> 
+<script type="text/javascript" src="../static/js/jqBootstrapValidation.js"></script> 
+<script type="text/javascript" src="../static/js/contact_me.js"></script> 
+<script type="text/javascript" src="../static/js/main.js"></script>
 </body>
 </html>
