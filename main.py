@@ -91,6 +91,8 @@ def upload_file():
     if request.method == 'POST':
         f = request.files['file']
         file_name = './uploads/' + f.filename
+        if not os.path.exists('./uploads/'):
+            os.makedirs('./uploads/')
         f.save(file_name)
         
         task_id = long_running_job.delay(str(file_name))
