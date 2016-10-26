@@ -116,4 +116,4 @@ def result(task_id):
 
 
 if __name__ == "__main__":
-    app.run(host="144.76.79.114",port=getuid() + 1000, debug=True)
+    app.run(port=getuid() + 1000, debug=True)
