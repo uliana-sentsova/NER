@@ -110,26 +110,23 @@
           </div>
           <div id="success"></div>
           <button id='recognize' type="submit" class="btn btn-default">Отправить текст</button>
+          <button id='recognize' type="submit" class="btn btn-default">Отправить архив</button>
+
+          <input type="file" name="my_file" id="my-file" form=success placeholder="sfv">
+
+
+
+          <h1>Результат</h1>
+
+        <form>
+          <div class="form-group">
+            <textarea name="message" id="message" class="form-control" rows="4" placeholder="Здесь появится резльтат обработки" required></textarea>
+            <p class="help-block text-danger"></p>
+          </div>
+          <div id="success"></div>
+
+
         </form>
-
-
-<form id="upload-file" method="post" enctype="multipart/form-data">
-    <fieldset>
-        <input name="file" type="file">
-    </fieldset>
-    <fieldset>
-        <button id="upload-file-btn" type="button" class="btn btn-default">Отправить архив</button>
-    </fieldset>
-    <h1>Обработка текста</h1>
-      </form>
-        <div class='col-md-12' id='result'>
-            <textarea name="message" id="message" class="form-control" rows="4" placeholder="Здесь будет результат" required></textarea>
-      </div>
-    </div>
-  </div>
-</div>
-
-
 
 
 </div>

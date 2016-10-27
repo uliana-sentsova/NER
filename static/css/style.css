@@ -268,7 +268,7 @@ header .intro-text {
 }
 
 #contact .overlay {
-	padding: 200px 0;
+	padding: 120px 0;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#053740+0,053740+100&1+0,0.6+100 */
 	background: -moz-linear-gradient(top, rgba(100,149,237,1) 0%, rgba(100,149,237,0) 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(top, rgba(100,149,237,1) 0%, rgba(100,149,237,0) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -296,10 +296,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#053740', end
 #contact form {
 	padding: 20px 0;
 }
-#contact i.fa {
-	color: #121d1f;
-	margin-bottom: 10px;
-}
+
 #contact .text-danger {
 	color: #ff6600;
 	text-align: left;
@@ -312,8 +309,8 @@ label {
 #contact .form-control {
 	display: block;
 	width: 100%;
-	padding: 60px 12px;
-	margin: 10px 0;
+	padding: 60px 20px;
+	margin: 10px 20px;
 	font-size: 14px;
 	line-height: 1.42857143;
 	color: #3171E7;
