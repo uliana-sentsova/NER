@@ -108,22 +108,22 @@
             <textarea name="message" id="message" class="form-control" rows="4" placeholder="Ваш текст" required></textarea>
             <p class="help-block text-danger"></p>
           </div>
-          <div id="success"></div>
+          <div id="success">
           <button id='recognize' type="submit" class="btn btn-default">Отправить текст</button>
-          <button id='recognize' type="submit" class="btn btn-default">Отправить архив</button>
-
-          <input type="file" name="my_file" id="my-file" form=success placeholder="sfv">
-
-
+          </div>
+          <div id="something">
+<button id="upload-file-btn" type="button" class="btn btn-default">Отправить архив</button>
+          <input type="file" name="my_file" id="my-file" placeholder="sfv">
+          </div>
 
           <h1>Результат</h1>
 
         <form>
           <div class="form-group">
-            <textarea name="message" id="message" class="form-control" rows="4" placeholder="Здесь появится резльтат обработки" required></textarea>
+          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Здесь будет результат" required></textarea>
             <p class="help-block text-danger"></p>
           </div>
-          <div id="success"></div>
+          <div id="result"></div>
 
 
         </form>
