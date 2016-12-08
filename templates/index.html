@@ -70,7 +70,8 @@
     </div>
   </div>
 </header>
-<!-- Services Section -->
+
+
 <div id="services" class="text-center">
   <div class="container">
     <div class="col-md-8 col-md-offset-2 section-title">
@@ -86,12 +87,8 @@
         <h4>Получи отчёт</h4>
         <p>Информация о персонах, организациях и локациях, упомянутых в текстах.</p>
       </div>
-<!--       <div class="col-xs-6 col-md-4"> <i class="fa fa-area-chart"></i>
-        <h4>Получи визуализацию</h4>
-        <p>Графы связей между сущностями в тексте.</p> -->
-      </div>
     </div>
-  </div>
+</div>
 </div>
 
 
@@ -103,26 +100,41 @@
         <h1>Обработка текста</h1>
 
       </div>
-        <form>
-          <div class="form-group">
-            <textarea name="message" id="message" class="form-control" rows="4" placeholder="Ваш текст" required></textarea>
+      <form>
+          
+          <div class="form-group" align="center">
+            <textarea name="message" id="message" class="form-control" rows="4" placeholder="Ваш текст" required>
+            </textarea>
             <p class="help-block text-danger"></p>
           </div>
-          <div id="success">
+          
+          <div id="success"></div>
+          
           <button id='recognize' type="submit" class="btn btn-default">Отправить текст</button>
-          </div>
-          <div id="something">
-<button id="upload-file-btn" type="button" class="btn btn-default">Отправить архив</button>
-          <input type="file" name="my_file" id="my-file" placeholder="sfv">
-          </div>
+      
+      </form>
 
-<div id="result" class="text-center">
 
+    <form id="upload-file" method="post" enctype="multipart/form-data" align="center">
+        <fieldset>
+            <button id="upload-file-btn" type="button" class="btn btn-default">Отправить архив</button>
+            <input name="file" type="file" style="color:black; display:inline">
+        </fieldset>
+    
+    </form>
+    
+      <div class='col-md-12' id='result_header'>
           <h1>Результат</h1>
-          </div>
+      </div>
+      <div class='col-md-12' id='result'></div>
+      </div>
 
-
+    </div>
+  </div>
 </div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.min.js"></script>
+
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
 <script type="text/javascript" src="../static/js/jquery.1.11.1.js"></script> 
 <script type="text/javascript" src="../static/js/bootstrap.js"></script> 
