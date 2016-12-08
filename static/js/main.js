@@ -10,7 +10,7 @@ function main() {
           target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
           if (target.length) {
             $('html,body').animate({
-              scrollTop: target.offset().top - 40
+              scrollTop: target.offset().top
             }, 900);
             return false;
           }
@@ -96,9 +96,17 @@ $(document).ready(function () {
         setTimeout(function () {
           $('#result').html('Архив обрабатывается');  
           polling(task_id);
+
         }, 1000);
+           $('#result_header').show();
+           $('#result').show();
+           $('html,body').animate({
+                  scrollTop: $('#result').offset().top -150
+                  }, 500);
       }
+
     });
+    
   };
 
 $('#upload-file-btn').click(function() {
@@ -133,12 +141,18 @@ $('#upload-file-btn').click(function() {
       success: function(response) {
                 var d = JSON.parse(response);
                 $('#result').html(d.text);
+                $('#result_header').show();
+                $('#result').show();
+                $('html,body').animate({
+                  scrollTop: $('#result').offset().top -150
+                  }, 400);
             },
       error: function(error) {
           console.log(error);
       }
         
     });
+
       return false
   });
 });
