@@ -255,8 +255,18 @@ header .intro-text {
 	background: rgba(255,255,255,1);
 	border-radius: 50%;
 }
+#result_header {
+	display:none;
+	margin: 10px;
+}
 
-
+#result {
+	display:none;
+	padding: 40px;
+	/*margin: 10px;*/
+	border: 1px solid rgba(100,149,237,1);
+	border-radius: 5px;
+}
 /* Contact Section */
 #contact {
 	background: url(../img/intro-bg.jpg) no-repeat center top;
@@ -294,9 +304,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#053740', end
 }
 
 #contact form {
-	padding: 20px 0;
+	padding: 0px 0;
 }
-
+#contact i.fa {
+	color: #121d1f;
+	margin-bottom: 10px;
+}
 #contact .text-danger {
 	color: #ff6600;
 	text-align: left;
@@ -308,9 +321,9 @@ label {
 }
 #contact .form-control {
 	display: block;
-	width: 100%;
-	padding: 60px 20px;
-	margin: 10px 20px;
+	width: 80%;
+	padding: 60px 12px;
+	margin: 10px 0;
 	font-size: 14px;
 	line-height: 1.42857143;
 	color: #3171E7;
@@ -363,6 +376,7 @@ color: #ccc;
 }
 
 
+
 /* Media Queries */
 @media (max-width: 1024px) {
 .intro H1 {
@@ -377,24 +391,34 @@ header .intro-text {
 }
 }
 
-
-
 #result {
 	background-color: white;
 	color: black;
 }
 
-#result h1 {
-	padding: 20px 20px;
-}
-
 .loc {
-	background-color: red; 
+	background-color: #e84343; 
 }
 
 .org {
-	background-color: blue; 
+	background-color: #63a6ef; 
 }
 .per {
-	background-color: green; 
+	background-color: #eae752; 
 }
+#result_text {
+	text-align: justify;
+}
+
+#message {
+	width: 80%;
+}
+
+#upload-file-btn {
+	margin-left: 270px;
+}
+
+#upload-file {
+	padding: 0px;
+}
+
