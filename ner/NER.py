@@ -8,6 +8,7 @@ import pickle
 import sys
 import sklearn_crfsuite
 import argparse
+import re
 
 crf_model_path = 'ner/crf_models/CRF_sg_window_1_size_1000_clusters_500'
 w2v_clusters_path = 'ner/w2v_dicts/sg_window_1_size_1000_clusters_500.pickl'
@@ -349,17 +350,27 @@ def process_input(text):
             labeled_text.append((data[i][j]['text'], data[i][j]['BIO']))
 
     # преобразуем последовательность в html
-    html = ['<p>']
+    html = ['<p id="result_text">']
     tag = False
-    sep = ' '
-    for word, label in labeled_text:
-        if word in string.punctuation:
-            sep = ''
+    log = open('log.txt', 'w', encoding='utf8')
+    for i in range(len(labeled_text)):
+        word, label = labeled_text[i]
+        # print(repr(word))
+        # if word == ',\n' or word == '. ':
+        #     word = word.rstrip()
+        log.write(word + '\n')
+        sep = ''
+        # if i != len(labeled_text) -1 and labeled_text[i+1][0] in string.punctuation:
+        #     sep = ''
+        if (" " not in word and i != len(labeled_text)-1 and ' ' not in labeled_text[i+1][0]
+            and labeled_text[i+1][0] not in string.punctuation):
+            sep = ' '
         if label == 'O':
             if tag:
                 html.append('</mark>')
             tag = False
             html.append(word + sep)
+
 
         else:
             if label.startswith('B_'):
@@ -373,13 +384,10 @@ def process_input(text):
     if tag:
         html.append('</mark>')
     html.append('</p>')
-
-    return ''.join(html)
+    html = re.sub('[\r\n]', '<br/>', ''.join(html))
+    log.write(repr(html))
+    log.close()
+    return html
 
 if __name__ == '__main__':
     main()
-
-
-
-
-
